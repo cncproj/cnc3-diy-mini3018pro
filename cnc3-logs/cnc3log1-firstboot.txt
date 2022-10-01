@@ -1,0 +1,78 @@
+
+
+amazon product: diy mini 3018 pro milling machine 3 axis grbl control cnc router
+                kit engraving pvc,pcb,plastic,acrylic,wood router
+                engraving machine cnc3018 pro 30x18x4.5cm er11 collet with
+                offline hand control (3018 pro + offline controller)
+       brand: cnctopbaos
+       package include: cnc 3018 pro 3 axis cnc router engraving machine kit ...
+       asin:   BO8BCDVBHK
+
+
+doc manual from the usb-flash drive:
+    cnc-3axis user manual 
+    part b: user manual
+    version 1.2
+papper manual: same as doc manual v1.2
+
+
+console ch340 output:
+
+Grbl 1.1f ['$' for help]
+
+$$:
+$0=10
+$1=25
+$2=0
+$3=2      <<<<doc manual: 5  step direction invert
+$4=0
+$5=0
+$6=0
+$10=1
+$11=0.010
+$12=0.002
+$13=0
+$20=0
+$21=0
+$22=0
+$23=0
+$24=25.000
+$25=500.000
+$26=250
+$27=1.000
+$30=1000
+$31=0
+$32=0
+$100=800.000    <<<<doc manual: 1600   x step/mm
+$101=800.000    <<<<doc manual: 1600   y
+$102=800.000    <<<<doc manual: 1600   z
+$110=1000.000
+$111=1000.000
+$112=600.000    <<<<doc manual: 800    z feed mm/min
+$120=30.000
+$121=30.000
+$122=30.000
+$130=200.000
+$131=200.000
+$132=200.000
+ok
+
+$#:
+[G54:0.000,0.000,0.000]
+[G55:0.000,0.000,0.000]
+[G56:0.000,0.000,0.000]
+[G57:0.000,0.000,0.000]
+[G58:0.000,0.000,0.000]
+[G59:0.000,0.000,0.000]
+[G28:0.000,0.000,0.000]
+[G30:0.000,0.000,0.000]
+[G92:0.000,0.000,0.000]
+[TLO:0.000]
+[PRB:0.000,0.000,0.000:0]
+ok
+
+$:
+[HLP:$$ $# $G $I $N $x=val $Nx=line $J=line $SLP $C $X $H ~ ! ? ctrl-x]
+ok
+
+

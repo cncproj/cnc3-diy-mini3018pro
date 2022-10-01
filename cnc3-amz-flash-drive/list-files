@@ -1,0 +1,42 @@
+
+ls --full-time
+
+drwxr-xr-x      4096 2022-04-19 04:42:18.000000000 -0700 Assembly instructions
+-rw-r--r--   4457340 2020-01-14 01:57:36.000000000 -0800 CNC3 User Manual_V1.2.docx
+-rw-rw-r--         0 2022-09-30 18:29:31.698879747 -0700 list-files
+-rw-r--r--   3519241 2020-01-14 01:58:24.000000000 -0800 overview.mp4
+drwxr-xr-x      4096 2022-04-19 04:42:20.000000000 -0700 Software for Control the machine(3Axis)
+drwxr-xr-x      4096 2022-04-19 04:42:38.000000000 -0700 Software for Laser(2Axis)
+-rw-r--r--   9311701 2020-01-14 01:58:40.000000000 -0800 software.mp4
+drwxr-xr-x      4096 2022-09-30 17:55:48.554089808 -0700 test code(3Axis)
+
+
+$ mkdir archive-software
+$ mv Software\ for\ * archive-software/
+$ tar zcf archive-software.tgz archive-software/
+$ ls -lrt
+-rw-r--r--    4457340 Jan 14  2020 'CNC3 User Manual_V1.2.docx'
+-rw-r--r--    3519241 Jan 14  2020  overview.mp4
+-rw-r--r--    9311701 Jan 14  2020  software.mp4
+drwxr-xr-x       4096 Apr 19 04:42 'Assembly instructions'
+drwxr-xr-x       4096 Sep 30 17:55 'test code(3Axis)'
+-rw-rw-r--        645 Sep 30 18:30  list-files
+drwxrwxr-x       4096 Sep 30 18:30  archive-software
+-rw-rw-r--   35607234 Sep 30 18:30  archive-software.tgz
+
+
+$ sha256sum archive-software.tgz 
+eaac94cf4aee3c101ff6f4d0e9d9afc45094eb97f3a096a729e075f0f5ff625b  archive-software.tgz
+
+
+$ split -b15M archive-software.tgz 
+$ ls -l xa*
+-rw-rw-r-- 1 steamy steamy 15728640 Sep 30 18:33 xaa
+-rw-rw-r-- 1 steamy steamy 15728640 Sep 30 18:33 xab
+-rw-rw-r-- 1 steamy steamy  4149954 Sep 30 18:33 xac
+
+$ mv xaa archive-software-tgz-xaa
+$ mv xab archive-software-tgz-xab
+$ mv xac archive-software-tgz-xac
+
+

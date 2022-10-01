@@ -1,0 +1,11 @@
+
+
+candle settings: control: safe position commands: 
+
+    initial: 
+        G21G90; G53G0Z0
+
+    change to: 
+        G21G90; G53G0Z0; G53G00G90Z0.;G53G90X0.Y0.
+
+
